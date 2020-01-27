@@ -1,0 +1,2 @@
+class SliceError(Exception):
+    pass
