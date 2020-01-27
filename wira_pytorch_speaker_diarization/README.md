@@ -1,3 +1,5 @@
+This `wira_pytorch_speaker_diarization` has been borrowed with permission from https://github.com/WiraDKP/pytorch_speaker_diarization with modifications. Special thanks to WiraDKP for this contribution to the group project. 
+
 # Speaker Diarization using GRU in PyTorch
 ## Installation
 ### Conda environment
