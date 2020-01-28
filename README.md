@@ -42,6 +42,20 @@ Then a group of people start wondering if there is a better way to represent spe
 
 ![Formula](https://github.com/Speech-VINO/Search-by-Voice/blob/master/formula.png)
 
+Looks intimidating, huh? Don’t worry, it is simply just to “weigh” the frequency. Because it comes from melody, people would call it the Mel Frequency, or sometimes the Mel Scale. In fact, you could somehow create your own scale based on what you think the importance of the frequency and call it KS Scale, Aiad Scale and so on. So I’ll stop the scale right there because there are a lot of them. I’ll simply mention the most famous one - the Mel Scale.
+
+So now, let’s weigh our previous feature. From the spectrogram, we can scale its frequency using Mel Scale, and now it is called as Mel Spectrogram.
+
+For some practical note
+```
+stft = librosa.stft
+mel scale = librosa.filters.mel
+melspectrogram = librosa.feature.melspectrogram
+```
+So now it is simply the same, just with different feature representation; and, you can use CNN, RNN, or Transformer to classify the mel spectrogram. In fact, that is what I did in speaker diarization project: I featurized the audio into log melspectrogram, and then classified them using RNN (GRU). That is the main idea.
+
+You can also use this for different use cases such as SER. Simply featurize the audio, then classify them into emotions. So my code in speaker diarization could actually be modified for SER too. 
+
 ## Literature & Resources:
 1. [Identifying speakers with voice recognition - Python Deep Learning Cookbook](https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781787125193/9/ch09lvl1sec61/identifying-speakers-with-voice-recognition)
 2. [New Scientist article: Speech Recognition AI Identifies You by Voice Wherever You Are](https://www.newscientist.com/article/mg22830423-100-speech-recognition-ai-identifies-you-by-voice-wherever-you-are/)
