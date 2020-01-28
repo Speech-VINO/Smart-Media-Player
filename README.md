@@ -12,6 +12,19 @@ To develop a search-by-voice application at the edge to detect time period(s) du
 ## Kaldi for Dummies tutorial (Official):
 https://kaldi-asr.org/doc/kaldi_for_dummies.html
 
+## Notes from Wira
+There are 2 approach to handle a raw audio data:
+1. using the raw signal
+2. converts it to “image”
+It is common to choose the latter because it saves a lot of computation. Think about it, raw signal with 44.1 kHz would have 44100 data points each second. That is quiet overwhelming to compute. So there are different way to represent those raw audio signals. Instead of its amplitude, why not focus on its frequency? And there the representation of frequency vs time of an audio signal is what we called as spectrogram. We actually have a powerful tool to convert amplitude to frequency, it is called Fourier Transform. 
+
+So when we have an audio signal, here is what we do:
+* Set a certain window / segment length to compute Fourier Transform
+* Convert those segment and we get its freq information
+* Move the window to the right, and start compute the freq again until it reaches the end of the audio
+This is called *STFT* (Short-term Fourier Transform) and Voila… STFT results in frequencies for each window plot it as frequency vs time, we’ll get the spectrogram. This is easy to do using python library named librosa.
+Spectrogram may be the basic feature you need to know for now.
+
 ## Literature & Resources:
 1. [Identifying speakers with voice recognition - Python Deep Learning Cookbook](https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781787125193/9/ch09lvl1sec61/identifying-speakers-with-voice-recognition)
 2. [New Scientist article: Speech Recognition AI Identifies You by Voice Wherever You Are](https://www.newscientist.com/article/mg22830423-100-speech-recognition-ai-identifies-you-by-voice-wherever-you-are/)
