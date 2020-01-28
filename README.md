@@ -12,6 +12,9 @@ To develop a search-by-voice application at the edge to detect time period(s) du
 ## Kaldi for Dummies tutorial (Official):
 https://kaldi-asr.org/doc/kaldi_for_dummies.html
 
+## Code contribution by Wira (source code adapted here) 
+1. https://github.com/WiraDKP/pytorch_speaker_diarization
+
 ## Notes from Wira
 There are 2 approach to handle a raw audio data:
 1. Using the raw signal
