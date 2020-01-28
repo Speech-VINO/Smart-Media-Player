@@ -4,7 +4,7 @@
 To develop a search-by-voice application at the edge to detect time period(s) during audio/video play where specific persons are speaking with Intel's OpenVINO Toolkit
 
 ## Plan of Attack:
-TODO
+![Search-by-Voice Workflow](https://github.com/Speech-VINO/Search-by-Voice/blob/master/searchbyvoiceapp.png)
 
 ## Datasets:
 1. https://www.kaggle.com/wiradkp/mini-speech-diarization
