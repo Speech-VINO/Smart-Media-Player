@@ -40,7 +40,7 @@ If you look at a spectrogram, you would almost always saw that in higher frequen
 
 Then a group of people start wondering if there is a better way to represent spectrogram? Can we somehow “weigh” the lower frequency better than the higher one? Those people are Stevens, Volkmann, and Newmann. They used a natural frequency in our melody and created this formula: 
 
-![Formula]()
+![Formula](https://github.com/Speech-VINO/Search-by-Voice/blob/master/formula.png)
 
 ## Literature & Resources:
 1. [Identifying speakers with voice recognition - Python Deep Learning Cookbook](https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781787125193/9/ch09lvl1sec61/identifying-speakers-with-voice-recognition)
