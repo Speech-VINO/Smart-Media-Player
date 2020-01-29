@@ -6,6 +6,9 @@ To develop a search-by-voice application at the edge to detect time period(s) du
 ## Plan of Attack:
 ![Search-by-Voice Workflow](https://github.com/Speech-VINO/Search-by-Voice/blob/master/searchbyvoiceapp.png)
 
+## Official PyTorch torchaudio tutorial
+https://pytorch.org/tutorials/beginner/audio_preprocessing_tutorial.html
+
 ## Datasets:
 1. https://www.kaggle.com/wiradkp/mini-speech-diarization
 
