@@ -68,3 +68,4 @@ You can also use this for different use cases such as SER. Simply featurize the 
 6. [Medium article: AEI: Artificial 'Emotional' Intelligence](https://towardsdatascience.com/aei-artificial-emotional-intelligence-ea3667d8ece)
 7. [Medium article: Speaker Diarization with Kaldi](https://towardsdatascience.com/speaker-diarization-with-kaldi-e30301b05cc8)
 8. [How to start Kaldi and speech recognition](https://towardsdatascience.com/how-to-start-with-kaldi-and-speech-recognition-a9b7670ffff6)
+9. https://www.kaggle.com/caesarlupum/speech-recognition-timealignedspectrogramsn
