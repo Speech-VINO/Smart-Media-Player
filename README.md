@@ -1,21 +1,39 @@
-# Search-by-Voice Project for the Intel Edge AI Scholarship Challenge 2020 SpeechVINO study group
+# Smart Media Player - Segment Video/Audio by Speaker 
+*Search-by-Voice based Project for the Intel Edge AI Scholarship Challenge 2020 #SpeechVINO study group*
 
 ## Goal:
-To develop a search-by-voice application at the edge to detect time period(s) during audio/video play where specific persons are speaking with Intel's OpenVINO Toolkit
+To develop a ***Smart Media Player Application*** at the Edge using Intel's OpenVINO Toolkit where, given an audio or video as input, the application will segment it in terms of timestamps with respect to the individual speakers.
+
+## Introduction:
+As meantioned above, the goal of ***Smart Media Player Application*** is to develop a search-by-voice application at the edge to detect time period(s) during audio/video play where the specific person is speaking, using Intel's OpenVINO Toolkit.
+
+**Why did we choose to work on this project?**
+
+Often, there are times when people are looking for a certain speaker and would want to listen to that part of the audio or video clip! Maybe its a webinar with many speakers, or just an audio clip where you want to listen to only what Mr. X spoke of. At times like these, it's cumbersome to search through the entire audio or video clip just for a few seconds long clip, and would rather look for an application that could help find Mr. X's video or audio segments with just one click.
+
+**So, How does the Smart Media Player Application help such users?**
+
+Once the audio or video clip is submitted, the search-by-voice segregates or makes a list of speakers and their timestamps in the given clip and presents it to the user. Now, the user may just look for Mr. X's part from within the audio or video clip with just one click!
+
+**What could this be used for?**
+
+Normal day to day users searching webinar clips, Forensics - searching video for certain speakers, etc.
+
+**What happens under the hood - Our Approach?**
+
+Under the hood, once the user submits an audio or video clip, the audio part of it is taken and pre-processed to the desired input format, followed by Speaker diarisation (or diarization), which is the process of partitioning an input audio stream into homogeneous segments according to the speaker identity, resulting with the list of Identified speakers and their audio clip timestamps.
+
+For which, the team chose to try out two options - (1) Create a model from scratch and train it, (2) Use Kaldi, an open-source speech recognition toolkit, which is currently in progress!
 
 ## Plan of Attack:
-![Search-by-Voice Workflow](https://github.com/Speech-VINO/Search-by-Voice/blob/master/searchbyvoiceapp.png)
-
-## Official PyTorch torchaudio tutorial
-https://pytorch.org/tutorials/beginner/audio_preprocessing_tutorial.html
+![Search-by-Voice Workflow](https://github.com/Speech-VINO/Search-by-Voice/blob/master/work%20flow.png)
 
 ## Datasets:
 1. https://www.kaggle.com/wiradkp/mini-speech-diarization
 
-## Kaldi for Dummies tutorial (Official):
-https://kaldi-asr.org/doc/kaldi_for_dummies.html
+# Approach 1: From Scratch
 
-## Code contribution by Wira (source code adapted here) 
+### Code contribution by Wira (source code adapted here) 
 1. https://github.com/WiraDKP/pytorch_speaker_diarization
 
 ## Notes from Wira
@@ -62,6 +80,52 @@ So now it is simply the same, just with different feature representation; and, y
 
 You can also use this for different use cases such as SER. Simply featurize the audio, then classify them into emotions. So my code in speaker diarization could actually be modified for SER too. 
 
+### Current status and understanding of the results: 
+We have a trained speaker embedding that could represent an audio segment into vector. The speaker embedding is used in the speaker diarization to find timestamp for each speaker in the audio/video. We have come up with a mockup of the application that demonstrates how the smart media player should work. **Desired outputs:** Timestamp of each speaker in an audio/video including unknown person.
+
+![Scattered graph depictions the speaker diaraization](https://github.com/Speech-VINO/Search-by-Voice/blob/master/image1.jpg)
+
+# Approach 2: Using Kaldi
+
+## Why Choose Kaldi?
+Kaldi is an open-source speech recognition toolkit written in C++ for speech recognition and signal processing, freely available under the Apache License v2.0.It aims to provide software that is flexible and extensible, and is intended for use by automatic speech recognition (ASR) researchers for building a recognition system.
+
+It supports linear transforms, MMI, boosted MMI and MCE discriminative training, feature-space discriminative training, and deep neural networks and is capable of generating features like mfcc, fbank, fMLLR, etc. Hence in recent deep neural network research, a popular usage of Kaldi is to pre-process raw waveform into acoustic feature for end-to-end neural models. Acoustic models are the statistical representations of a phoneme’s acoustic information. A phoneme here represents a member of the set of speech sounds in a language. 
+
+The acoustic models are created by training the models on acoustic features from labeled data, such as the Wall Street Journal Corpus, TIMIT, or any other transcribed speech corpus. There are many ways these can be trained, and the tutorial will try to cover some of the more standard methods. Acoustic models are necessary not only for automatic speech recognition, but also for forced alignment.
+
+*Kaldi provides tremendous flexibility and power in training your own acoustic models and forced alignment system.*
+
+### Current Status:
+Converting Kaldi for deployment in OpenVINO, followed by Model Optimization. 
+
+# Team Members (Slack handles)
+
+@Aiad Taha 
+
+@K.S.
+
+@MCB 
+
+@sago 
+
+@Shaistha
+
+@Wira
+
+@Zarreen Reza 
+
+
+## Desired Outputs:
+![Video ouput](https://github.com/Speech-VINO/Search-by-Voice/blob/master/output1.png)
+
+![Marked Output](https://github.com/Speech-VINO/Search-by-Voice/blob/master/output2.png)
+
+## Future Updates
+
+
+## Social Impact 
+
 ## Literature & Resources:
 1. [Identifying speakers with voice recognition - Python Deep Learning Cookbook](https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781787125193/9/ch09lvl1sec61/identifying-speakers-with-voice-recognition)
 2. [New Scientist article: Speech Recognition AI Identifies You by Voice Wherever You Are](https://www.newscientist.com/article/mg22830423-100-speech-recognition-ai-identifies-you-by-voice-wherever-you-are/)
@@ -73,3 +137,5 @@ You can also use this for different use cases such as SER. Simply featurize the 
 8. [How to start Kaldi and speech recognition](https://towardsdatascience.com/how-to-start-with-kaldi-and-speech-recognition-a9b7670ffff6)
 9. https://www.kaggle.com/caesarlupum/speech-recognition-timealignedspectrogramsn
 10. [Medium article: How to Start with Kalki and Speech Recognition](https://towardsdatascience.com/how-to-start-with-kaldi-and-speech-recognition-a9b7670ffff6)
+11. [Official PyTorch torchaudio tutorial](https://pytorch.org/tutorials/beginner/audio_preprocessing_tutorial.html)
+12. [Kaldi for Dummies tutorial (Official)](https://kaldi-asr.org/doc/kaldi_for_dummies.html)
