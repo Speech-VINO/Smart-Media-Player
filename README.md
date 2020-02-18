@@ -5,7 +5,7 @@
 To develop a ***Smart Media Player Application*** at the Edge using Intel's OpenVINO Toolkit where, given an audio or video as input, the application will segment it in terms of timestamps with respect to the individual speakers.
 
 ## Idea and Motivation
- ***Smart Media Player Application*** at the edge to detect time period(s) during audio/video play where the specific person is speaking, using Intel's OpenVINO Toolkit.
+ ***Smart Media Player Application*** at the edge to detect time period(s) inside audio/video media to allow end users to play where the specific person is speaking, using Intel's OpenVINO Toolkit.
 
 **Why did we choose to work on this project?**
 
