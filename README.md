@@ -19,6 +19,9 @@ Once the audio or video clip is submitted, the application segregates or makes a
 
 Normal day to day users searching webinar clips, Forensics - searching video for certain speakers, etc.
 
+**Social Impact**
+
+
 **What happens under the hood - Our Approach?**
 
 Under the hood, once the user submits an audio or video clip, the audio part of it is taken and pre-processed to the desired input format, followed by Speaker diarisation (or diarization), which is the process of partitioning an input audio stream into homogeneous segments according to the speaker identity, resulting with the list of Identified speakers and their audio clip timestamps.
@@ -26,13 +29,14 @@ Under the hood, once the user submits an audio or video clip, the audio part of 
 For which, the team chose to try out two options - (1) Create a model from scratch and train it, (2) Use Kaldi, an open-source speech recognition toolkit, which is currently in progress!
 
 
+
 ## Smart Media Player Demo (Desired Output)
 
-**Smart Player for one video**
+### Smart Player for one video
 User can have list of speakers inside the media and can know/play specific one
 ![Project Workflow](https://github.com/Speech-VINO/Smart-Media-Player/blob/master/Demo/smartplayer-video.gif)
 
-**Smart Player for Playlist**
+### Smart Player for Playlist
 User can have list of speakers inside the media as well as know how many minutes inside each video in playlist specific speaker is speaking and how many speakers are inside the each video in playlist
 ![Project Workflow](https://github.com/Speech-VINO/Smart-Media-Player/blob/master/Demo/smartplayer-playlist.gif)
 
@@ -43,13 +47,55 @@ User can have list of speakers inside the media as well as know how many minutes
 ## Concept Implementation (AI Magic)
 @wira please add speaker embedding and diaraization concept behinde this project
 
-## Datasets
-1. https://www.kaggle.com/wiradkp/mini-speech-diarization
 
-# Approach 1: From Scratch
+
+# Approach 1: Build AI model from Scratch
 
 ### Code contribution by Wira (source code adapted here) 
 1. https://github.com/WiraDKP/pytorch_speaker_diarization
+
+
+### Current status and understanding of the results: 
+We have a trained speaker embedding that could represent an audio segment into vector. The speaker embedding is used in the speaker diarization to find timestamp for each speaker in the audio/video. We have come up with a mockup of the application that demonstrates how the smart media player should work. **Desired outputs:** Timestamp of each speaker in an audio/video including unknown person.
+
+![Scattered graph depictions the speaker diaraization](https://github.com/Speech-VINO/Search-by-Voice/blob/master/image1.jpg)
+
+# Approach 2: Using Kaldi pretrained model
+
+## Why Choose Kaldi?
+Kaldi is an open-source speech recognition toolkit written in C++ for speech recognition and signal processing, freely available under the Apache License v2.0.It aims to provide software that is flexible and extensible, and is intended for use by automatic speech recognition (ASR) researchers for building a recognition system.
+
+It supports linear transforms, MMI, boosted MMI and MCE discriminative training, feature-space discriminative training, and deep neural networks and is capable of generating features like mfcc, fbank, fMLLR, etc. Hence in recent deep neural network research, a popular usage of Kaldi is to pre-process raw waveform into acoustic feature for end-to-end neural models. Acoustic models are the statistical representations of a phoneme’s acoustic information. A phoneme here represents a member of the set of speech sounds in a language. 
+
+The acoustic models are created by training the models on acoustic features from labeled data, such as the Wall Street Journal Corpus, TIMIT, or any other transcribed speech corpus. There are many ways these can be trained, and the tutorial will try to cover some of the more standard methods. Acoustic models are necessary not only for automatic speech recognition, but also for forced alignment.
+
+*Kaldi provides tremendous flexibility and power in training your own acoustic models and forced alignment system.*
+
+### Current Status
+Converting Kaldi for deployment in OpenVINO, followed by Model Optimization. 
+
+# Team Members (Slack handles)
+
+@Aiad Taha 
+
+@K.S.
+
+@MCB 
+
+@sago 
+
+@Shaistha
+
+@Wira
+
+@Zarreen Reza 
+
+
+## Future Updates
+
+## State of the Art
+# Datasets
+1. https://www.kaggle.com/wiradkp/mini-speech-diarization
 
 ## Notes from Wira
 There are 2 approach to handle a raw audio data:
@@ -95,51 +141,7 @@ So now it is simply the same, just with different feature representation; and, y
 
 You can also use this for different use cases such as SER. Simply featurize the audio, then classify them into emotions. So my code in speaker diarization could actually be modified for SER too. 
 
-### Current status and understanding of the results: 
-We have a trained speaker embedding that could represent an audio segment into vector. The speaker embedding is used in the speaker diarization to find timestamp for each speaker in the audio/video. We have come up with a mockup of the application that demonstrates how the smart media player should work. **Desired outputs:** Timestamp of each speaker in an audio/video including unknown person.
 
-![Scattered graph depictions the speaker diaraization](https://github.com/Speech-VINO/Search-by-Voice/blob/master/image1.jpg)
-
-# Approach 2: Using Kaldi
-
-## Why Choose Kaldi?
-Kaldi is an open-source speech recognition toolkit written in C++ for speech recognition and signal processing, freely available under the Apache License v2.0.It aims to provide software that is flexible and extensible, and is intended for use by automatic speech recognition (ASR) researchers for building a recognition system.
-
-It supports linear transforms, MMI, boosted MMI and MCE discriminative training, feature-space discriminative training, and deep neural networks and is capable of generating features like mfcc, fbank, fMLLR, etc. Hence in recent deep neural network research, a popular usage of Kaldi is to pre-process raw waveform into acoustic feature for end-to-end neural models. Acoustic models are the statistical representations of a phoneme’s acoustic information. A phoneme here represents a member of the set of speech sounds in a language. 
-
-The acoustic models are created by training the models on acoustic features from labeled data, such as the Wall Street Journal Corpus, TIMIT, or any other transcribed speech corpus. There are many ways these can be trained, and the tutorial will try to cover some of the more standard methods. Acoustic models are necessary not only for automatic speech recognition, but also for forced alignment.
-
-*Kaldi provides tremendous flexibility and power in training your own acoustic models and forced alignment system.*
-
-### Current Status
-Converting Kaldi for deployment in OpenVINO, followed by Model Optimization. 
-
-# Team Members (Slack handles)
-
-@Aiad Taha 
-
-@K.S.
-
-@MCB 
-
-@sago 
-
-@Shaistha
-
-@Wira
-
-@Zarreen Reza 
-
-
-## Desired Outputs
-![Video ouput](https://github.com/Speech-VINO/Search-by-Voice/blob/master/output1.png)
-
-![Marked Output](https://github.com/Speech-VINO/Search-by-Voice/blob/master/output2.png)
-
-## Future Updates
-
-
-## Social Impact 
 
 ## Literature & Resources:
 1. [Identifying speakers with voice recognition - Python Deep Learning Cookbook](https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781787125193/9/ch09lvl1sec61/identifying-speakers-with-voice-recognition)
