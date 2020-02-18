@@ -26,10 +26,20 @@ Under the hood, once the user submits an audio or video clip, the audio part of 
 For which, the team chose to try out two options - (1) Create a model from scratch and train it, (2) Use Kaldi, an open-source speech recognition toolkit, which is currently in progress!
 
 
+## Smart Media Player Demo (Desired Output)
+
+**Player for one video
+![Project Workflow](https://github.com/Speech-VINO/Smart-Media-Player/blob/master/Demo/smartplayer-video.gif)
+
+**Player for Playlist
+![Project Workflow](https://github.com/Speech-VINO/Smart-Media-Player/blob/master/Demo/smartplayer-playlist.gif)
 
 
-## Inference Pipeline
-![Search-by-Voice Workflow](https://github.com/Speech-VINO/Search-by-Voice/blob/master/work%20flow.png)
+## Concept Workflow
+![Project Workflow](https://github.com/Speech-VINO/Smart-Media-Player/blob/master/Approach/ConceptWorkflow.png)
+
+## Concept Implementation (AI Magic)
+@wira please add speaker embedding and diaraization concept behinde this project
 
 ## Datasets
 1. https://www.kaggle.com/wiradkp/mini-speech-diarization
