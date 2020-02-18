@@ -15,11 +15,17 @@ Often, there are times when people are looking for a certain speaker and would w
 
 Once the audio or video clip is submitted, the application segregates or makes a list of speakers and their timestamps in the given clip and presents it to the user. Now, the user may just look for Mr. X's part from within the audio or video clip with just one click!
 
+User/Organization has corpus of media and they need to index them by our model.
+Our model will run over all the media library they have and for any new media they added to library and save metadata somewhere in backend and link them to each media in the library.
+After indexing stage, they will use our media player which will make use of metadata attached to played video/playlist
+
+
 **What could this be used for?**
 
 Normal day to day users searching webinar clips, Forensics - searching video for certain speakers, etc.
 
 **What is the Social Impact?**
+
 Increase productivity and save time of millions of humans while watching/listening to media!
 
 **What happens under the hood - Our Approach?**
