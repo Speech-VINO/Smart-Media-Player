@@ -20,7 +20,7 @@ Once the audio or video clip is submitted, the application segregates or makes a
 Normal day to day users searching webinar clips, Forensics - searching video for certain speakers, etc.
 
 **Social Impact**
-
+Increase productivity and save time of millions of humans while watching/listening to media!
 
 **What happens under the hood - Our Approach?**
 
