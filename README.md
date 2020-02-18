@@ -5,7 +5,7 @@
 To develop a ***Smart Media Player Application*** at the Edge using Intel's OpenVINO Toolkit where, given an audio or video as input, the application will segment it in terms of timestamps with respect to the individual speakers.
 
 ## Idea and Motivation
-As meantioned above, the goal of ***Smart Media Player Application*** is to develop a search-by-voice application at the edge to detect time period(s) during audio/video play where the specific person is speaking, using Intel's OpenVINO Toolkit.
+ ***Smart Media Player Application*** at the edge to detect time period(s) during audio/video play where the specific person is speaking, using Intel's OpenVINO Toolkit.
 
 **Why did we choose to work on this project?**
 
@@ -13,7 +13,7 @@ Often, there are times when people are looking for a certain speaker and would w
 
 **So, How does the Smart Media Player Application help such users?**
 
-Once the audio or video clip is submitted, the search-by-voice segregates or makes a list of speakers and their timestamps in the given clip and presents it to the user. Now, the user may just look for Mr. X's part from within the audio or video clip with just one click!
+Once the audio or video clip is submitted, the application segregates or makes a list of speakers and their timestamps in the given clip and presents it to the user. Now, the user may just look for Mr. X's part from within the audio or video clip with just one click!
 
 **What could this be used for?**
 
