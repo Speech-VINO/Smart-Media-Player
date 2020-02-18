@@ -28,11 +28,11 @@ For which, the team chose to try out two options - (1) Create a model from scrat
 
 ## Smart Media Player Demo (Desired Output)
 
-## Player for one video
+**Smart Player for one video**
 User can have list of speakers inside the media and can know/play specific one
 ![Project Workflow](https://github.com/Speech-VINO/Smart-Media-Player/blob/master/Demo/smartplayer-video.gif)
 
-## Player for Playlist
+**Smart Player for Playlist**
 User can have list of speakers inside the media as well as know how many minutes inside each video in playlist specific speaker is speaking and how many speakers are inside the each video in playlist
 ![Project Workflow](https://github.com/Speech-VINO/Smart-Media-Player/blob/master/Demo/smartplayer-playlist.gif)
 
