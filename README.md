@@ -1,10 +1,10 @@
 # Smart Media Player - Segment Video/Audio by Speaker 
-*Search-by-Voice based Project for the Intel Edge AI Scholarship Challenge 2020 #SpeechVINO study group*
+*Smart Media Player Project for the Intel Edge AI Scholarship Challenge 2020 #SpeechVINO study group*
 
-## Goal:
+## Goal
 To develop a ***Smart Media Player Application*** at the Edge using Intel's OpenVINO Toolkit where, given an audio or video as input, the application will segment it in terms of timestamps with respect to the individual speakers.
 
-## Introduction:
+## Idea and Motivation
 As meantioned above, the goal of ***Smart Media Player Application*** is to develop a search-by-voice application at the edge to detect time period(s) during audio/video play where the specific person is speaking, using Intel's OpenVINO Toolkit.
 
 **Why did we choose to work on this project?**
@@ -25,10 +25,13 @@ Under the hood, once the user submits an audio or video clip, the audio part of 
 
 For which, the team chose to try out two options - (1) Create a model from scratch and train it, (2) Use Kaldi, an open-source speech recognition toolkit, which is currently in progress!
 
-## Plan of Attack:
+
+
+
+## Inference Pipeline
 ![Search-by-Voice Workflow](https://github.com/Speech-VINO/Search-by-Voice/blob/master/work%20flow.png)
 
-## Datasets:
+## Datasets
 1. https://www.kaggle.com/wiradkp/mini-speech-diarization
 
 # Approach 1: From Scratch
@@ -96,7 +99,7 @@ The acoustic models are created by training the models on acoustic features from
 
 *Kaldi provides tremendous flexibility and power in training your own acoustic models and forced alignment system.*
 
-### Current Status:
+### Current Status
 Converting Kaldi for deployment in OpenVINO, followed by Model Optimization. 
 
 # Team Members (Slack handles)
@@ -116,7 +119,7 @@ Converting Kaldi for deployment in OpenVINO, followed by Model Optimization.
 @Zarreen Reza 
 
 
-## Desired Outputs:
+## Desired Outputs
 ![Video ouput](https://github.com/Speech-VINO/Search-by-Voice/blob/master/output1.png)
 
 ![Marked Output](https://github.com/Speech-VINO/Search-by-Voice/blob/master/output2.png)
