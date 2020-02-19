@@ -51,9 +51,15 @@ User can have list of speakers inside the media as well as know how many minutes
 ![Project Workflow](https://github.com/Speech-VINO/Smart-Media-Player/blob/master/Approach/ConceptWorkflow.png)
 
 ## Concept Implementation (AI Magic)
-@wira please add speaker embedding and diaraization concept behinde this project
+First, we need a _fingerprint_ that could recognize different speaker. It means that we need a model that could encode segment of audios into a vector. This is called a speaker embedding.
 
+The one that we have developed is a speaker embedding using 1D CNN and ends with a statistical pooling and trained it on VCTK Dataset. The reason behind using a custom architecture is to ensure that OpenVINO could optimize it into IR later on. Hence, choosing the simple 1D CNN instead of a more complex architecture.
 
+Using the speaker embedding, we could now convert voices of a few person only with a few seconds of audio (more is better) into a vector and save it to a database.
+
+After we have a speaker embedding, we need a tool that could recognize if someone speaking or not, and that is called voice activity detection (VAD). We use a simple zero crossing rate feature for the VAD. It could be improved using more advance VAD in the future. The VAD provide us with timestamps where voices are detected.
+
+We could now split the audio based on the detected timestamps, and each of them is converted into vector using speaker embedding. Finally, we can cluster those vector and perform similarity check with vectors in our database. If it is similar, then we would label the segment with the name of the person, while if it is not similar under certain threshold, we would recognize it as unknown person. We now know who (label) spoke when (timestamp) in the audio, and this is called as a speaker diarization.
 
 # Approach 1: Build AI model from Scratch
 
