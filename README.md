@@ -40,15 +40,15 @@ For which, the team chose to try out two options - (1) Create a model from scrat
 
 ### Smart Player for one video
 User can have list of speakers inside the media and can know/play specific one
-![Project Workflow](https://github.com/Speech-VINO/Smart-Media-Player/blob/master/Demo/smartplayer-video.gif)
+![Project Workflow](./assets/demo/smartplayer-video.gif)
 
 ### Smart Player for Playlist
 User can have list of speakers inside the media as well as know how many minutes inside each video in playlist specific speaker is speaking and how many speakers are inside the each video in playlist
-![Project Workflow](https://github.com/Speech-VINO/Smart-Media-Player/blob/master/Demo/smartplayer-playlist.gif)
+![Project Workflow](./assets/demo/smartplayer-playlist.gif)
 
 
 ## Concept Workflow
-![Project Workflow](https://github.com/Speech-VINO/Smart-Media-Player/blob/master/Approach/ConceptWorkflow.png)
+![Project Workflow](./assets/approach/ConceptWorkflow.png)
 
 ## Concept Implementation (AI Magic)
 First, we need a _fingerprint_ that could recognize different speaker. It means that we need a model that could encode segment of audios into a vector. This is called a speaker embedding.
@@ -70,7 +70,7 @@ We could now split the audio based on the detected timestamps, and each of them 
 ### Current status and understanding of the results: 
 We have a trained speaker embedding that could represent an audio segment into vector. The speaker embedding is used in the speaker diarization to find timestamp for each speaker in the audio/video. We have come up with a mockup of the application that demonstrates how the smart media player should work. **Desired outputs:** Timestamp of each speaker in an audio/video including unknown person.
 
-![Scattered graph depictions the speaker diaraization](https://github.com/Speech-VINO/Search-by-Voice/blob/master/image1.jpg)
+![Scattered graph depictions the speaker diarization](./assets/image1.jpg)
 
 # Approach 2: Using Kaldi pretrained model
 
@@ -127,7 +127,7 @@ Spectrogram may be the basic feature you need to know for now.
 Now, we have a spectrogram in freq vs time. When we check the STFT results, turns out that the Fourier Transform results are all near zero. That’s why we’ll measure it in the log scale, or more commonly, in decibels (dB). I prefer log though, but it is related to the math, so I’ll not explain here for now.
 
 Here is how significant the log transformation is: 
-![Log Transformation Image](https://github.com/Speech-VINO/Search-by-Voice/blob/master/log_transformation.png)
+![Log Transformation Image](./assets/log_transformation.png)
 
 We would call these kind of audio representation as audio features. So now you have a feature, you can perform classification using CNN or RNN.
 
@@ -137,7 +137,7 @@ If you look at a spectrogram, you would almost always saw that in higher frequen
 
 Then a group of people start wondering if there is a better way to represent spectrogram? Can we somehow “weigh” the lower frequency better than the higher one? Those people are Stevens, Volkmann, and Newmann. They used a natural frequency in our melody and created this formula: 
 
-![Formula](https://github.com/Speech-VINO/Search-by-Voice/blob/master/formula.png)
+![Formula](./assets/formula.png)
 
 Looks intimidating, huh? Don’t worry, it is simply just to “weigh” the frequency. Because it comes from melody, people would call it the Mel Frequency, or sometimes the Mel Scale. In fact, you could somehow create your own scale based on what you think the importance of the frequency and call it KS Scale, Aiad Scale and so on. So I’ll stop the scale right there because there are a lot of them. I’ll simply mention the most famous one - the Mel Scale.
 
