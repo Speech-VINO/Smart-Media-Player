@@ -108,7 +108,6 @@ Converting Kaldi for deployment in OpenVINO, followed by Model Optimization.
 ## Future Enhancements
 Add another AI model to detect faces of the speakers to enhance the detection of speaker segments inside audio where speaker is presented inside video
 
-## State of the Art
 # Datasets
 1. https://www.kaggle.com/wiradkp/mini-speech-diarization
 
