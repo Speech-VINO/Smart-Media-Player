@@ -73,7 +73,7 @@ We have a trained speaker embedding that could represent an audio segment into v
 ![Scattered graph depictions the speaker diarization](./assets/image1.jpg)
 
 ### Sample inference form IR model using OpenVINO over audio input file:
- ![Inference form model using OpenVINO](./assets/run_inference.gif)
+ ![Inference form model using OpenVINO](./assets/run/run_inference.gif)
 
 # Approach 2: Using Kaldi pretrained model
 
