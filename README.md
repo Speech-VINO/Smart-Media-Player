@@ -72,6 +72,7 @@ We have a trained speaker embedding that could represent an audio segment into v
  ![Inference form model using OpenVINO](./assets/run/run_inference.gif)
 
 ### Code contribution done by @Wira (source code adapted in this repo) 
+Application use "OpenVINO version **2020.1.023** and not the one in workspace
 https://github.com/WiraDKP/pytorch_speaker_embedding_for_diarization
 
 # Approach 2: Using Kaldi pretrained model
