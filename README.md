@@ -71,7 +71,7 @@ We have a trained speaker embedding that could represent an audio segment into v
 ### Sample inference form IR model using OpenVINO over audio input file:
  ![Inference form model using OpenVINO](./assets/run/run_inference.gif)
 
-### Code contribution done by Wira (source code adapted in this repo) 
+### Code contribution done by @Wira (source code adapted in this repo) 
 
 
 # Approach 2: Using Kaldi pretrained model
@@ -112,7 +112,7 @@ Add another AI model to detect faces of the speakers to enhance the detection of
 # Datasets
 1. https://www.kaggle.com/wiradkp/mini-speech-diarization
 
-## Notes from Wira
+## Notes from @Wira
 There are 2 approach to handle a raw audio data:
 1. Using the raw signal
 2. Converts the signal to “image”
