@@ -63,10 +63,6 @@ We could now split the audio based on the detected timestamps, and each of them 
 
 # Approach 1: Build AI model from Scratch
 
-### Code contribution by Wira (source code adapted here) 
-1. https://github.com/WiraDKP/pytorch_speaker_diarization
-
-
 ### Current status and understanding of the results: 
 We have a trained speaker embedding that could represent an audio segment into vector. The speaker embedding is used in the speaker diarization to find timestamp for each speaker in the audio/video. We have come up with a mockup of the application that demonstrates how the smart media player should work. **Desired outputs:** Timestamp of each speaker in an audio/video including unknown person.
 
@@ -74,6 +70,9 @@ We have a trained speaker embedding that could represent an audio segment into v
 
 ### Sample inference form IR model using OpenVINO over audio input file:
  ![Inference form model using OpenVINO](./assets/run/run_inference.gif)
+
+### Code contribution done by Wira (source code adapted in this repo) 
+
 
 # Approach 2: Using Kaldi pretrained model
 
