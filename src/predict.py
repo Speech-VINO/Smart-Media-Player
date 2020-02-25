@@ -37,10 +37,14 @@ class BasePredictor(BaseLoad):
             c[start:end] = speaker
 
         plt.figure(figsize=(15, 2))
-        plt.plot(y[0], "k-")
+        ax = plt.axes()
+        ax.plot(y[0], "k-")
         for idx, speaker in enumerate(set(speakers)):
-            plt.fill_between(range(len(c)), -1, 1, where=(c==speaker), alpha=0.5, label=f"speaker_{speaker}")
-        plt.legend(loc="upper center", ncol=idx+1, bbox_to_anchor=(0.5, -0.25))
+            ax.fill_between(range(len(c)), -1, 1, where=(c == speaker), alpha=0.5, label=f"speaker_{speaker}")
+        box = ax.get_position()
+        ax.set_position([box.x0, box.y0 + box.height * 0.15, box.width, box.height * 0.8])
+        ax.legend(loc="upper center", ncol=idx+1, bbox_to_anchor=(0.5, -0.1))
+        plt.show()
         
         
 class PyTorchPredictor(BasePredictor):
