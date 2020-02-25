@@ -1,0 +1,155 @@
+<?xml version="1.0" ?>
+<mapping>
+	<map>
+		<framework name="47" out_port_id="47"/>
+		<IR id="15" name="47" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="60" out_port_id="60"/>
+		<IR id="37" name="60" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="69" out_port_id="69"/>
+		<IR id="45" name="69" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="63" out_port_id="63"/>
+		<IR id="40" name="63" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="70" out_port_id="70"/>
+		<IR id="47" name="70" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="53" out_port_id="53"/>
+		<IR id="25" name="53" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="54" out_port_id="54"/>
+		<IR id="27" name="54" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="52" out_port_id="52"/>
+		<IR id="24" name="Add1_1161/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv.9.weight" out_port_id="conv.9.weight"/>
+		<IR id="16" name="Mul1_1148/Fused_Mul_14031405_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv.0.weight" out_port_id="conv.0.weight"/>
+		<IR id="1" name="Mul1_/Fused_Mul_13911393_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="42" out_port_id="42"/>
+		<IR id="7" name="42" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv.6.weight" out_port_id="conv.6.weight"/>
+		<IR id="11" name="Mul1_1136/Fused_Mul_13991401_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="fc.0.weight" out_port_id="fc.0.weight"/>
+		<IR id="48" name="onnx_initializer_node_fc.0.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="input" out_port_id="input"/>
+		<IR id="0" name="input" out_port_id="0"/>
+	</map>
+	<map>
+		<framework name="50" out_port_id="50"/>
+		<IR id="20" name="50" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv.3.weight" out_port_id="conv.3.weight"/>
+		<IR id="6" name="Mul1_1124/Fused_Mul_13951397_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="output" out_port_id="0"/>
+		<IR id="54" name="output" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="43" out_port_id="43"/>
+		<IR id="9" name="Add1_1125/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="62" out_port_id="62"/>
+		<IR id="39" name="62/add_/sub" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="68" out_port_id="68"/>
+		<IR id="44" name="68/pow_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="39" out_port_id="39"/>
+		<IR id="2" name="39" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="40" out_port_id="40"/>
+		<IR id="4" name="Add1_/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="45" out_port_id="45"/>
+		<IR id="12" name="45" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="73" out_port_id="73"/>
+		<IR id="53" name="output/Cast_12171_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="57" out_port_id="57"/>
+		<IR id="32" name="57" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="58" out_port_id="58"/>
+		<IR id="33" name="58" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="44" out_port_id="44"/>
+		<IR id="10" name="44" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="48" out_port_id="48"/>
+		<IR id="17" name="48" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv.15.weight" out_port_id="conv.15.weight"/>
+		<IR id="26" name="Mul1_1172/Fused_Mul_14111413_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="55" out_port_id="55"/>
+		<IR id="29" name="Add1_1173/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="46" out_port_id="46"/>
+		<IR id="14" name="Add1_1137/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv.12.weight" out_port_id="conv.12.weight"/>
+		<IR id="21" name="Mul1_1160/Fused_Mul_14071409_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="49" out_port_id="49"/>
+		<IR id="19" name="Add1_1149/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="41" out_port_id="41"/>
+		<IR id="5" name="41" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="71" out_port_id="71"/>
+		<IR id="51" name="71" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="56" out_port_id="56"/>
+		<IR id="30" name="56" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="72" out_port_id="72"/>
+		<IR id="52" name="72" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="51" out_port_id="51"/>
+		<IR id="22" name="51" out_port_id="2"/>
+	</map>
+</mapping>
